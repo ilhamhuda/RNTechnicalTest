@@ -2,19 +2,13 @@
 
 This application is a disbursement Software Enginner - Mobile (React Native). This service is created as test before join with Flip.id.
 
-
-## Installation
-
-run npm install or yarn install
-
-## Run on Device
-run yarn android or yarn ios to run on device or emulator
-
 ## Project Info
 
 Main objective of this project was to have a single code base for mobile apps with the logic and view separated.
 
-Technology use : 
+Minimized render times using React Hooks
+
+**Technology use : **
 1. React Native
 2. React Hooks
 3. React Redux
@@ -41,14 +35,14 @@ Technology use :
 App navigated to Detail Page when transaction row on Transaction List Page is pressed.
 
 - it has all informations about the selected transaction
-- it has a back button
+- it has a back button - click Tutup
 
 ### - Project Structure
 
   ```
 RNTechnicalTest
 ├── __tests__
-├── android
+├── android 
 ├── ios
 ├── src
 │   ├── assets
