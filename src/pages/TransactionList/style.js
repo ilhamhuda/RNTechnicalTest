@@ -29,15 +29,21 @@ export const styles = StyleSheet.create({
     },
     wrapSearch:{
         height:'100%',
-        flex:0.9,
+        flexGrow:0.96,
         display:'flex',
         flexDirection:'row',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
     },
+    wrapNominal:{
+        flexDirection:'row',
+        alignItems:'center',
+        height:22, 
+        overflow:'hidden'
+    },  
     inputSearch:{
         flex:1,
-        fontSize:15,
+        fontSize:13,
         color:colors.text.primary
     },
     imgSearch:{
@@ -51,17 +57,17 @@ export const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'flex-start',
         alignItems:'center',
+        maxWidth:'30%'
     },
     txtSort:{
         color:colors.primary,
         fontWeight:'bold',
-        fontSize:16,
-        textTransform:'uppercase',
+        fontSize:13,
         marginRight:8
     },
     imgSort:{
-        width:20,
-        height:20
+        width:15,
+        height:15
     },
     wrapListItem:{
         display:'flex',
@@ -75,6 +81,8 @@ export const styles = StyleSheet.create({
         width:'70%',
         height:'100%',
         justifyContent:'space-between',
+        display:'flex',
+        flexDirection:'column',
     },
     wrapRecipient:{
         display:'flex',
@@ -83,7 +91,7 @@ export const styles = StyleSheet.create({
     },
     txtBank:{
         fontWeight:'bold',
-        fontSize:18,
+        fontSize:15,
         color:colors.text.primary,
         textTransform:'capitalize'
     },
@@ -93,7 +101,7 @@ export const styles = StyleSheet.create({
         marginHorizontal:5
     },
     txtRecipient:{
-        fontSize:15,
+        fontSize:14,
         color:colors.text.primary,
         alignItems:'flex-end',
     },
@@ -136,7 +144,8 @@ export const styles = StyleSheet.create({
         textTransform:'capitalize'
     },
     bulletIcon:{
-        fontSize:25, 
-        marginHorizontal:3
+        fontSize:20,
+        marginTop:-3,
+        marginHorizontal:3,
     }  
 })

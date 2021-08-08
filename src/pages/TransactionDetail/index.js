@@ -61,7 +61,7 @@ const TransactionDetail = ({navigation}) => {
                         </View>
                         <View style={styles.warpTransactionInfo}>
                             <View style={styles.wrapRow70}>
-                                <Text style={[styles.txtTitle,{textTransform:'uppercase'}]}>- {detailData.beneficiary_name}</Text>
+                                <Text style={[styles.txtTitle,{textTransform:'uppercase'}]}>{detailData.status === 'PENDING' && '- '}{detailData.beneficiary_name}</Text>
                                 <Text style={styles.txtValue}>{detailData.account_number}</Text>
                             </View>
                             <View style={styles.wrapRow30}>

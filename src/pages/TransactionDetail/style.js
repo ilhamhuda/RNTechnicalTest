@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
     txtClose:{
         fontSize:17,
-        color:colors.pink,
+        color:colors.primary,
         fontWeight:'bold',
         height:'100%',
     },

@@ -103,13 +103,12 @@ const TransactionList = ({navigation}) => {
                                     <Image source={RightArrowIcon} style={styles.imgRightArrow} />
                                     <Text style={[styles.txtBank, String(item.beneficiary_bank).length <= 4 && styles.txtUpper]}>{item.beneficiary_bank}</Text>
                                 </View>
-                                <Text style={[styles.txtRecipient,{textTransform:'uppercase'}]}>- {item.beneficiary_name}</Text>
-                                <View style={{flexDirection:'row', alignItems:'center'}}>
-                                    <Text style={styles.txtRecipient}>Rp{convertRupiah(item.amount)}</Text>
+                                <Text style={[styles.txtRecipient,{textTransform:'uppercase'}]}>{item.status === 'PENDING' && '- '}{item.beneficiary_name}</Text>
+                                <View style={styles.wrapNominal}>
+                                    <Text numberOfLines={1} style={styles.txtRecipient}>Rp{convertRupiah(item.amount)}</Text>
                                     <Text style={styles.bulletIcon}>{'\u2022'}</Text>
-                                    <Text style={styles.txtRecipient}>{formatedDate(item.created_at)}</Text>
+                                    <Text numberOfLines={1} style={styles.txtRecipient}>{formatedDate(item.created_at)}</Text>
                                 </View>    
-                                    
                             </View>
                             <Badge value={item.status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} status={item.status === 'SUCCESS' ? 'success' : 'outline-primary'} />
                         </View>
@@ -130,11 +129,12 @@ const TransactionList = ({navigation}) => {
                     <View style={styles.wrapSearch}>
                         <Image style={styles.imgSearch} source={SearchIcon} />
                         <TextInput
+                            multiline={false}
                             onChangeText={changeSearch}
                             value={search}
-                            editable
+                            returnKeyType='search'
                             style={styles.inputSearch}
-                            placeholder="Cari nama, bank, nominal"
+                            placeholder="Cari nama, bank, atau nominal"
                         />
                     </View>
                     <TouchableWithoutFeedback onPress={() => toggleModal()}>
