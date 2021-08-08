@@ -119,5 +119,7 @@ RNTechnicalTest
 ├── metro.config.json
 ```
 
+## SCREENSHOOT
+
   
-  
+![Alt text](https://i.ibb.co/pW0VnSg/RNTest.png")
