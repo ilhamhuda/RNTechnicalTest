@@ -1,6 +1,6 @@
 # RNTechnicalTest - Flip.id
 
-This application is a part of transaction view, this service is created as test Software Enginner - Mobile (React Native) before join with Flip.id.
+This application is a part of transaction view, this project is created as test Software Enginner - Mobile (React Native) before join with Flip.id.
 
 ## Project Info
 
@@ -119,5 +119,7 @@ RNTechnicalTest
 ├── metro.config.json
 ```
 
+## SCREENSHOOT
+
   
-  
+![Alt text](https://i.ibb.co/pW0VnSg/RNTest.png")
