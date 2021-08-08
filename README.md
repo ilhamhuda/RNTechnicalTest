@@ -45,38 +45,76 @@ App navigated to Detail Page when transaction row on Transaction List Page is pr
 
 ### - Project Structure
 
-    /__tests__                  - React native unit test 
-    /android                    - React native android source code
-    /ios                        - React native ios source code
-    /src
-        /assets                 - 
-            /dummyData          -
-            /Icons              -
-            
-        /components             - 
-            /atom               -
-            
-        /config                 - 
-            /api                -
-            
-        /pages                  -
-            /TransactionDetail  -
-            /TransactionList    -
-            
-        /redux                  -
-            /actions            -
-            /reducer            -
-            
-        /routes                 - 
-            
-        /services               - 
-          /transaction          -
-          
-        /static                 -
-   
-        /utils                  -
-             /colors            -
-             /manipulationText  -
-             /request           -
-        
+  ```
+RNTechnicalTest
+├── __tests__
+├── android
+├── ios
+├── src
+│   ├── assets
+│   │    └── DummyData
+│   │    └── Icons
+│   └── components
+│   │      └── Atom
+│   │      │     └── Badge
+│   │      │            └── index.js
+│   │      │     └── Card
+│   │      │            └── index.js
+|   |      |     └── RadioButton 
+│   │      │            └── index.js
+│   │      └── index.js
+│   └── Config
+│   │      └── api
+|   |      |     └── config.js
+|   |      |     └── index.js 
+|   |      |     └── url.js 
+│   │      └── index.js
+│   │      └── appConfig.js
+│   └── pages
+│   │      └── TransactionDetail
+|   |      |     └── index.js 
+|   |      |     └── style.js 
+│   │      └── TransactionList
+|   |      |     └── index.js 
+|   |      |     └── style.js 
+│   │      └── index.js
+│   └── redux
+│   │    └── actions
+│   │    │      └── index.js
+│   │    │      └── transaction.js
+│   │    │      └── transactionDetail.js
+│   │    └── reducers
+│   │    │      └── store.js
+│   │    │      └── index.js
+│   │    └── store.js
+│   │    └── index.js
+│   ├── routes
+│   │    └── index.js
+│   ├── services
+│   │      └── transaction
+│   │      │     └── index.js
+│   │      └── index.js
+│   ├── static
+│   │      └── index.js
+│   ├── utils
+│   │      └── colors
+│   │      │     └── index.js
+│   │      └── manipulationText
+│   │      │     └── index.js
+│   │      └── request
+│   │      │     └── index.js
+│   │      └── index.js
+│   └── App.js
+├── .editorconfig
+├── app.json
+├── .buckconfig
+├── .prettierrc.js
+├── .watchmanconfig
+├── eslintrc.json
+├── index.js
+├── package.json
+├── metro.config.json
+```
+
+  
   
