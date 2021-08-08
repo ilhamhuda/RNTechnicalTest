@@ -32,6 +32,7 @@ const TransactionList = ({navigation}) => {
     const [sort, setSort] = useState(dataRadiuoButton[0])
     const [search, setSearch] = useState('')
     
+    // MARK : Will Mount Fetch Data - This is fetch data trigger before apps appear
     useEffect(() => {
         fetchData()
     },[])
@@ -44,11 +45,13 @@ const TransactionList = ({navigation}) => {
         }
     },[search, sort, data])
 
+    // MARK : Fetch Data Transaction - This is a function to retrieve Transaction data from Result which comes from API
     const fetchData = async() => {
         let data = await transaction();
         dispatch(setTransaction(data))
     }
 
+    // MARK : Change Sort By - This is a trigger to change the order of the list view  transaction  based on certain criteria
     const changeSort = useCallback((sortData) => {
         dispatch(setLoadingQuery())
         setSort(sortData)
@@ -58,15 +61,18 @@ const TransactionList = ({navigation}) => {
         
     },[sort, modalVisible, height])
 
+    // MARK : Set Search - This is a trigger function when there is a text change in the search bar field 
     const changeSearch = useCallback((e) => {
         setSearch(e)
     },[search])
 
+    // MARK : Toggle Modal - This is a trigger function to display a pop up sort by transaction
     const toggleModal = (propmodal = true, propheight = height) => {
         setModalVisible(propmodal)
         setHeightOverlay(propheight)
     }
 
+    // MARK : Navigation Control - This is a function for navigating to the transaction details page by bringing up the data object
     const navigationControll = (item) => {
         dispatch(setTransactionDetail(item))
         navigation.navigate('TransactionDetail')
@@ -77,6 +83,7 @@ const TransactionList = ({navigation}) => {
         return dataRadiuoButton.map((item, idx) => <RadioButton key={idx} value={item.value} active={sort.value === item.value} onPress={() => changeSort(item)} />)
     },[sort])
 
+    // MARK : List View Transaction - This is a function to display a list of transactions
     const ListItem = useMemo(() => {
         if(dataQuery){
             return dataQuery.map((item, index) => {
@@ -100,6 +107,8 @@ const TransactionList = ({navigation}) => {
         }
     },[dataQuery])
 
+    
+    // MARK : Search Bar - This is the Search Bar View and Sort By Transaction toggle
     return (
         <View 
             style={styles.wrapper}>

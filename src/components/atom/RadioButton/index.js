@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 import { colors } from '../../../utils'
 
+// MARK : Radio Button - Radio Button Component on transaction sort list
 const RadioButton = ({ active, style, value, onPress }) => {
     return(
         

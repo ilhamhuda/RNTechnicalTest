@@ -7,7 +7,7 @@ import {
 import { colors } from '../../../utils';
 import PropType from 'prop-types';
 
-
+// MARK : List View - Transaction item list view component
 const Card = ({children, type, style, onPress}) => {
     return (
         <TouchableWithoutFeedback onPress={onPress}>

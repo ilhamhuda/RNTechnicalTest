@@ -7,7 +7,7 @@ import {
     TouchableOpacity,
     ActivityIndicator,
     SafeAreaView,
-    Clipboard
+    // Clipboard
 } from 'react-native'
 import styles from './style'
 import { useSelector, useDispatch } from 'react-redux'
@@ -20,6 +20,7 @@ const TransactionDetail = ({navigation}) => {
     const { transactionDetail:{loading, detailData} } = useSelector(state => state.transactionDetail)
     const  dispatch = useDispatch()
 
+     // MARK : Will Mount Reset Data - This is Reset data trigger before appear 
     useEffect(() => {
         return () => {
             dispatch(resetTransactionDetail())
@@ -27,9 +28,11 @@ const TransactionDetail = ({navigation}) => {
     },[])
 
     const copyToClipboard = () => {
-        Clipboard.setString(`#${detailData.id}`)
+        // Clipboard.setString(`#${detailData.id}`)
+        // i comment this because in new update react native we can't using Clipboard anymore, we have to use react-native-community/clipboard. But i can't use third party library because Test Requirement.
     }
 
+    // MARK : Detail View Transaction - This is a function to display a Detail of transactions
     return(
         <SafeAreaView style={styles.wrapper}>
             {loading ? (
