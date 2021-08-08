@@ -8,7 +8,7 @@ Main objective of this project was to have a single code base for mobile apps wi
 
 Minimized render times using React Hooks
 
-**Technology use : **
+## Technology use :
 1. React Native
 2. React Hooks
 3. React Redux
