@@ -44,7 +44,7 @@ const TransactionList = ({navigation}) => {
             let getData = await getQueryData(search, sort, data);
             dispatch(setQueryTransaction(getData))
         }
-    },[search, sort, data])
+    },[loading, search])
 
     // MARK : Fetch Data Transaction - This is a function to retrieve Transaction data from Result which comes from API
     const fetchData = async() => {
@@ -54,11 +54,17 @@ const TransactionList = ({navigation}) => {
 
     // MARK : Change Sort By - This is a trigger to change the order of the list view  transaction  based on certain criteria
     const changeSort = useCallback((sortData) => {
-        dispatch(setLoadingQuery())
+        
         setSort(sortData)
-        setTimeout(() => {
-            toggleModal(false, 0)
-        },200)
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                toggleModal(false, 0)
+                resolve(true)
+            },300)
+        }).then(() => {
+            dispatch(setLoadingQuery())
+        })
+       
         
     },[sort, modalVisible, height])
 
