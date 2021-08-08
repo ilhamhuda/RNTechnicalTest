@@ -16,7 +16,7 @@ Minimized render times using React Hooks
 5. Axios
 
 ### Criteria :
-- [x] UI similarity to our mockup 
+- [x] UI similarity to mockup 
 - [x] App functionalities 
 - [x] React Hooks
 - [x] Code cleanliness and simplicity 
