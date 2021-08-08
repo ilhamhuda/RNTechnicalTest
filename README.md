@@ -1,6 +1,6 @@
 # RNTechnicalTest - Flip.id
 
-This application is a disbursement Software Enginner - Mobile (React Native). This service is created as test before join with Flip.id.
+This application is a part of transaction view, this service is created as test Software Enginner - Mobile (React Native) before join with Flip.id.
 
 ## Project Info
 
@@ -15,6 +15,15 @@ Minimized render times using React Hooks
 4. React Navigation
 5. Axios
 
+### Criteria :
+- [x] UI similarity to our mockup 
+- [x] App functionalities 
+- [x] React Hooks
+- [x] Code cleanliness and simplicity 
+- [x] Component modularization
+- [x] Minimized render times
+- [x] State Management
+- [x] Necessary comments
 
 ### - Objective
 1. Transaction List Page
