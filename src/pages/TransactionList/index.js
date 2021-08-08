@@ -9,7 +9,8 @@ import {
     TouchableWithoutFeedback,
     Modal,
     Dimensions,
-    ActivityIndicator
+    ActivityIndicator,
+    SafeAreaView
 } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -97,7 +98,12 @@ const TransactionList = ({navigation}) => {
                                     <Text style={[styles.txtBank, String(item.beneficiary_bank).length <= 4 && styles.txtUpper]}>{item.beneficiary_bank}</Text>
                                 </View>
                                 <Text style={[styles.txtRecipient,{textTransform:'uppercase'}]}>- {item.beneficiary_name}</Text>
-                                <Text style={styles.txtRecipient}>Rp{convertRupiah(item.amount)} &bull; {formatedDate(item.created_at)}</Text>
+                                <View style={{flexDirection:'row', alignItems:'center'}}>
+                                    <Text style={styles.txtRecipient}>Rp{convertRupiah(item.amount)}</Text>
+                                    <Text style={styles.bulletIcon}>{'\u2022'}</Text>
+                                    <Text style={styles.txtRecipient}>{formatedDate(item.created_at)}</Text>
+                                </View>    
+                                    
                             </View>
                             <Badge value={item.status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} status={item.status === 'SUCCESS' ? 'success' : 'outline-primary'} />
                         </View>
@@ -110,7 +116,7 @@ const TransactionList = ({navigation}) => {
     
     // MARK : Search Bar - This is the Search Bar View and Sort By Transaction toggle
     return (
-        <View 
+        <SafeAreaView 
             style={styles.wrapper}>
             <StatusBar backgroundColor={colors.background.secondary} barStyle="dark-content" />
             <ScrollView style={styles.body}>
@@ -150,7 +156,7 @@ const TransactionList = ({navigation}) => {
                 </Modal>
             </ScrollView>
             <View style={[styles.overlay, { height: heightOverlay}]} />
-        </View>
+        </SafeAreaView>
     )
 }
 

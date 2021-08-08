@@ -134,5 +134,9 @@ export const styles = StyleSheet.create({
     },
     txtCapital:{
         textTransform:'capitalize'
+    },
+    bulletIcon:{
+        fontSize:25, 
+        marginHorizontal:3
     }  
 })
